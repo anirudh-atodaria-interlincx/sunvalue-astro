@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="Calculate The Cost of Solar Panels in Your State. Free Solar Cost Estimator And Analysis">
+		<meta name="author" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<meta name="format-detection" content="telephone=no">
+		<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+		<title>State Solar Incentive Program</title>
+   		<link href="/css/save.css" rel="stylesheet" type="text/css" />
+
+  
+		<style>
+			.wrapper .custom-radio.borderd.with-img .custom-radio-item {border-radius:5px;}
+			.wrapper .progress-block p {color:#000;}
+			.wrapper .progress {background-color: rgb(229 233 235);}
+
+			#estimate-bill div h4.sub-title.show-in-mobile {
+				margin-bottom: 15px;
+				max-width: 570px;
+				margin-left: auto;
+				margin-right: auto;
+				border-radius: 20px;
+				color: rgb(255, 255, 255);
+				background-color: rgb(98, 143, 172);
+				padding: 5px;
+			}
+
+			#estimate-bill div h4.sub-title.hide-in-mobile{
+				max-width: 570px;
+				color: rgb(255, 255, 255);
+				background-color: rgb(98, 143, 172);
+				padding: 5px;
+				margin: 0px 235px 40px !important;
+				border-radius: 20px !important;
+				width: auto !important;
+			}
+			#estimate-email > div > h4.sub-title.hide-in-mobile.banner {
+				margin-bottom: 40px;
+				font-weight: 500;
+				border-radius: 20px;
+				color: rgb(255, 255, 255);
+				background-color: rgb(98, 143, 172);
+				padding: 5px;
+			}
+			#estimate-email > div > h4.sub-title.show-in-mobile.banner {
+				margin-bottom: 15px;
+				border-radius: 20px;
+				color: rgb(255, 255, 255);
+				background-color: rgb(98, 143, 172);
+				padding: 5px;
+			}
+			#companies > div {
+				background-color:rgb(131, 190, 99);
+			}
+			#companies {
+				padding: 10px 0px 0px 0px; 
+			}
+			#next-block{
+				position: static;
+				padding-top: 15px;
+			}
+			#next-block a {
+				font-size: 1.5rem;
+				padding: 20;
+				min-width: 350px;
+			}
+		</style>
+    
+<!-- Google Tag Manager -->
+<script>
+	if (document.location.hostname.match('sunvalue.com')) {
+		(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-NZRLS3C');
+	}
+</script>
+<!-- End Google Tag Manager -->
+
+
+	</head>
+	<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NZRLS3C";
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+	
+
+       	<div class="content-wrapper">
+		<header class="site-header">
+			<div class="container">
+				<div class="lock"></div>
+				<div class="logo"><a href="#"><img height="28" width="165" src="/images/logo-no-bg.svg" alt=""></a></div>
+				<div class="header-right">
+					<div class="step-loading">
+						<div class="wave">
+							<div class="dot"></div>
+							<div class="dot"></div>
+							<div class="dot"></div>
+						</div>
+						<div class="loading" data-loading-text="Calculating..."></div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+
+        <form id="solarForm">	
+		<input name="full_address" class="fulladdress" type="hidden">
+		<input name="lat" class="addr-lat" type="hidden" autocomplete="off">
+		<input name="lng" class="addr-lng" type="hidden" autocomplete="off">
+		<input name="street" class="hstreet" type="hidden" value="">
+		<input name="city" class="hcity" type="hidden" value="" id="city">
+		<input name="state" class="hstate" type="hidden" value="" id="state">
+		<input name="country" id="country" class="hcountry" type="hidden" value="US" />
+		<input name="landing_page" type="hidden" value="save">
+		<input name="universal_leadid" id="leadid_token" type="hidden" value="" autocomplete="off"/>
+		<input name="residence_ownership" type="hidden" value="Own" id="ownership"/>
+		<input name="adblock" type="hidden" value="" id="adbl"/>
+		<input type="hidden" name="xxTrustedFormCertUrl" id="xxTrustedFormCertUrl_0" value="https://cert.trustedform.com/454a35b802f3e7b63ffabb4efedb7c6ebe67886c">
+		<div class="wrapper show">
+
+			<header id="header-empty-id">
+				<div class="status-indicator">
+					<div class="inner">
+						<span class="indicator"></span>
+						<div class="item indicator-1">Average</div>
+						<div class="item indicator-2">Good</div>
+						<div class="item indicator-3">Great</div>
+						<div class="item indicator-4">Amazing</div>
+						<div class="item indicator-5">Massive</div>
+					</div>
+					<div class="status">Estimated Savings: <span>Great</span></div>
+				</div>
+			</header>
+
+			<header id="header-with-id" style="display: none">
+				
+				<div class="progress-block" style="z-index:1">
+					<div class="progress">
+						<div class="progress-bar"></div>
+					</div>
+					<p>Your progress <span class="progress-width">16%</span></p>
+				</div>
+			</header>
+
+			<div class="swiper-container banner-slider">
+      			<div style="width:150px;max-width:100%;margin:0 auto;" id="nogo">
+					Loading...
+				</div>
+				<ul class="swiper-wrapper">
+					<li class="swiper-slide steps one">
+						<div class="v-center" id="estimate-zip">
+							<div class="container text-center">
+ 								<h1 class="title htitle"></h1>
+								<h4 class="sub-title mb-20 location-text"></h4>
+                
+ 								<h5><strong>Enter your zip code to check for incentives in your area</strong></h5>
+								
+								<div class="small-container">
+									<ul class="form-list">
+										<li>
+											<input type="text" inputmode="numeric"  class="text-field zip" id="zip" name="zip" autocomplete="postal-code" onkeypress="return isNumberKey(event)"  placeholder="Zip Code" pattern="[0-9]*" maxlength="5" size="5" value="">
+											<span class="error-msg" id="zip-error">&nbsp;</span>
+										</li>
+										<li>
+											<a id="calculateYourSavings" href="javascript:;" class="btn default btn-with-loader">
+												<div class="loader-hidden"></div>
+												<span>Next</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+                                
+							</div>
+						</div>
+					</li>
+					<li class="swiper-slide steps three">
+						<div class="v-center" id="estimate-bill">
+							<div class="container text-center">
+								<h4 class="sub-title hide-in-mobile">✅ Incentives are found in your area!</h4>
+								<h4 class="sub-title show-in-mobile">✅ Incentives are found in your area!</h4>
+								<h2 class="title hide-in-mobile">How much is your monthly energy bill?</h2>
+								<h2 class="title show-in-mobile">How much is your monthly energy bill?</h2>
+								<div class="rangeslider-block with-gradient electric">
+									<input type="range" min="101" max="800" value="101" name="monthly_elec" data-rangeslider>
+									<div class="rangeslider-tooltip">$<output>50</output></div>
+									<div class="sliderLegend"> 
+										<p class="sliderLegendItem--start">$101</p> 
+										<p class="sliderLegendItem--end">$800+</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="swiper-slide steps">
+						<div class="v-center" id="estimate-provider">
+							<div class="container text-center">
+								<h2 class="title hide-in-mobile">Who is your utility provider?</h2>
+								<h2 class="title mb-5 show-in-mobile">Who is your utility provider?</h2>
+								<div class="custom-radio borderd small-container" id="companies">
+								</div>
+								<span class="error-msg" id="companies-error" style="text-align: center;">&nbsp;</span>
+							</div>
+						</div>
+					</li>
+					<li class="swiper-slide steps">
+						<div class="v-center" id="estimate-map">
+							<div class="container text-center">
+								<h2 class="title hide-in-mobile">Where is your home located?</h2>
+								<h2 class="title mb-5 show-in-mobile">Where is your home located?</h2>
+                                <h4 class="sub-title hide-in-mobile">This helps us find your home's position relative to the sun.</h4>
+								<h4 class="sub-title show-in-mobile">This helps us find your home's position relative to the sun.</h4>
+								<div class="map-loader">
+									<img src="/images/loader.svg">
+								</div>
+								<div class="small-container">
+                                    <input type="search" class="text-field" id="autoaddress" name="street" autocomplete="street-address" placeholder="Type Here e.g. 123 West Main Road">
+									<span class="error-msg" id="address-error">&nbsp;</span>
+									<div id="map_canvas" class="map-box"></div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="swiper-slide steps">
+						<div class="v-center" id="estimate-shade">
+							<div class="container text-center">
+								<h2 class="title hide-in-mobile">Does Your Roof Get Sunlight?</h2>
+								<h2 class="title show-in-mobile">Does Your Roof Get Sunlight?</h2>
+								<div class="custom-radio with-img borderd">
+									<div class="custom-radio-item radioNext"><input type="radio" name="shade" value="no_shade" ><span class="icon"><img loading="lazy" height="60" width="60" src="/images/no-shade-white.svg" alt=""></span>Full Sunlight</div>
+									<div class="custom-radio-item radioNext"><input type="radio" name="shade" value="low_shade"><span class="icon"><img loading="lazy" height="60" width="60" src="/images/little-shade-white.svg" alt=""></span>Some Shade</div>
+									<div class="custom-radio-item radioNext"><input type="radio" name="shade" value="high_shade"><span class="icon"><img loading="lazy" height="60" width="60" src="/images/lot-of-shade-white.svg" alt=""></span>Severe Shade</div>
+									<div class="custom-radio-item radioNext"><input type="radio" name="shade" value="unknown"><span class="icon"><img loading="lazy" height="60" width="60" src="/images/uncertain-white.svg" alt=""></span>Uncertain</div>
+								</div>
+								<span class="error-msg" id="shade-error" style="text-align: center;">&nbsp;</span>
+							</div>
+						</div>
+					</li>
+					<li class="swiper-slide steps">
+						<div class="v-center" id="estimate-email">
+							<div class="container text-center">
+								<h4 class="sub-title hide-in-mobile banner">✅ You're almost qualified for this limited-time program.</h4>
+								<h4 class="sub-title show-in-mobile banner">✅ You're almost qualified for this limited-time program.</h4>
+								<h2 class="title hide-in-mobile">What is your email address?</h2>
+								<h2 class="title mb-5 show-in-mobile">What is your email address?</h2>
+                                <h4 class="sub-title hide-in-mobile">We'll send you participation details.</h4>
+								<h4 class="sub-title show-in-mobile">We'll send you participation details.</h4>
+								<div class="small-container">
+									<input type="email" class="text-field" autocomplete="email" id="email" name="email" placeholder="Email address">
+									<span class="error-msg" id="email-error">&nbsp;</span>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="swiper-slide steps">
+						<div class="v-center" id="estimate-name">
+							<div class="container text-center">
+								<h2 class="title hide-in-mobile">What is your name, stranger?</h2>
+								<h2 class="title mb-5 show-in-mobile">What is your name, stranger?</h2>
+								<div class="medium-container">
+									<ul class="form-list">
+										<li>
+											<input type="text" class="text-field" id="fname" name="first_name" placeholder="Enter first name" autocomplete="on">
+											<span class="error-msg" id="fname-error"></span>
+										</li>
+										<li>
+											<input type="text" class="text-field" id="lname" name="last_name" placeholder="Enter last name" autocomplete="on">
+											<span class="error-msg" id="lname-error"></span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li class="swiper-slide steps last">
+						<div class="v-center" id="estimate-phone">
+							<div class="container text-center">
+								<h2 class="title hide-in-mobile">What is the best number to reach you at if you qualify?</h2>
+								<h2 class="title mb-5 show-in-mobile">What is the best number to reach you at if you qualify?</h2>
+								<h4 class="sub-title show-in-mobile">Don't worry, we won't bug you... We HATE bugs! 🕷</h4>
+								<h4 class="sub-title hide-in-mobile">Don't worry, we won't bug you... We HATE bugs! 🕷</h4>
+								<div class="medium-container">
+									<input type="text" inputmode="numeric" class="text-field vsmall-container" id="phone" name="phone_number" placeholder="Enter phone number">
+									<span class="error-msg vsmall-container mb-20" id="phone-error"></span>
+
+    								<input type="hidden" name="tcpa" id="leadid_tcpa_disclosure"/>
+									
+									<span class="final-btn" style="padding-top:15px;display:block;margin:0 auto">
+			    						<input type="submit" id="submit" class="btn default submitButton" value="submit" />
+									</span>
+									<label for="leadid_tcpa_disclosure"  class="font-12" style="margin-top:20px;display:block" id="tcpa_label">
+										By clicking the "Submit" button, you authorize sunvalue.com and up to <a href="/installers.html" target="_blank" tabindex="0" style="color: #5C5D61;text-decoration:underline">4 solar partners</a> to call you and send you pre-recorded messages and text messages at the number you entered above, using an autodialer, with offers about their products or services, even if your phone number is on any national or state "Do Not Call" list. Message and data rates may apply. Your consent here is not based on a condition of purchase.
+									</label>
+
+								</div>
+							</div>
+						</div>
+					</li>
+
+				</ul>
+				<div id="next-block" class="hide d-none" data-slide="">
+					<a href="javascript:;" class="default nextSlide">Next</a>
+				</div>
+			</div>
+			<div id="slider-block" class="btn-block hide" data-slide="">
+				<a href="javascript:;" class="back-link prevSlide">Back</a>
+				<a href="javascript:;" class="btn default nextSlide">Next</a>
+			</div>
+			<div class="report-block d-none">
+				<div class="v-center">
+					<div class="container text-center">
+						<div id="processor">
+							<div class="sphere" id="sphere1"></div>
+							<div class="sphere" id="sphere2"></div>
+							<div class="sphere" id="sphere3"></div>
+							<div class="sphere" id="sphere4"></div>
+						</div>
+						<h2 class="title" id="processor-title">Submitting Your Request...</h2>
+                        <h3 id="sub-title">This may take up to 30 seconds please wait.</h3>
+					</div>
+				</div>
+			</div>
+   		</div>
+		</form>
+        
+		<footer class="site-footer">
+			<div class="container">
+				<div class="row space-between align-center">
+					<div class="copyright">
+						<p class="copyright-text"></p>
+					</div>
+					<div class="logo"><a href="/"><img height="28" width="165" src="/images/logo-no-bg.svg" alt=""></a></div>
+					<div class="links">
+						<a href="/contact-us" target="_blank">Have a Question?</a>
+						<a href="/privacy-policy" target="_blank">Privacy Policy</a>
+						<a href="/terms-conditions" target="_blank">Terms of Use</a>
+						<a href="/ccpa" target="_blank">CCPA</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+        
+  </div>
+  		<link rel="preload" as="style" href="/css/swiper-bundle.min.css" onload="this.rel='stylesheet'" />
+		<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap" onload="this.rel='stylesheet'">
+
+    <script>
+      const currentYear = new Date().getFullYear()
+
+      document.querySelector(".copyright-text").append(
+        document.createTextNode(`SunValue © ${currentYear} All Rights Reserved.`)
+      );
+    </script>
+
+    <script>
+      const xhr = new XMLHttpRequest()
+      const apiUrl = 'https://api.sunvalue.com/api/geo'
+
+      let geoData = null
+
+      xhr.open("GET", apiUrl, true)
+      xhr.overrideMimeType("application/json")
+      xhr.onload = function (event) {
+        if (xhr.readyState === 4 && xhr.status === 200){
+          geoData = JSON.parse(xhr.responseText)
+        }
+        generateHeadline()
+      }
+
+      xhr.addEventListener('error', function (error) {
+        generateHeadline()
+        console.log(error)
+      })
+
+      xhr.send(null)
+
+      function generateHeadline () {
+        const params = (new URL(document.location)).searchParams
+
+        let headline = document.title
+
+        const state = geoData ? geoData.regionName || geoData.countryName : ''
+        const paramHeadline = params.get('headline')
+
+        if (paramHeadline) headline = paramHeadline
+        headline = headline.replace(/state/gi, state)
+    
+        document.title = headline
+        document.querySelector('#estimate-zip > div > h1').textContent = headline
+        window.dispatchEvent(new Event('resize'))
+      }
+    </script>
+
+		<script defer type="text/javascript" src="/js/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+		<script defer type="text/javascript" src="/js/html-ie.js"></script>
+		<script defer type="text/javascript" src="/js/rangeslider.min.js"></script>
+  		<script defer type="text/javascript" src="/js/save.js"></script>		
+
+
+        
+        
+  <script>
+       $(document).ready(function() {	 
+        jQuery(window).bind('scroll', function(e) {
+        if (jQuery(this).scrollTop() > 50) {
+            jQuery('.site-header').addClass('fixed');
+        } else {
+            jQuery('.site-header').removeClass('fixed');
+        }
+    });
+       }); 
+       
+       
+	$('#calculateYourSavings').click(function(){
+        $(".swiper-container").addClass('pt50');
+        $("#content-part").hide();
+    });
+
+
+	$('.sTop').click(function(e){
+        e.preventDefault();
+        window.scrollTo(0,0);
+    });
+
+
+    $('#cta2').click(function(){
+	   window.scrollTo(0,0);
+	});
+    
+
+        </script>
+
+<script type="text/javascript">
+	if (document.location.hostname.match('sunvalue.com')) {
+		(function() {
+			var field = 'xxTrustedFormCertUrl';
+			var provideReferrer = false;
+			var invertFieldSensitivity = false;
+			var tf = document.createElement('script');
+			tf.type = 'text/javascript'; tf.async = true;
+			tf.src = 'http' + ('https:' == document.location.protocol ? 's' : '') +
+			'://api.trustedform.com/trustedform.js?provide_referrer=' +
+			escape(provideReferrer) + '&field=' + escape(field) + '&l='+new
+			Date().getTime()+Math.random() + '&invert_field_sensitivity=' +
+			invertFieldSensitivity;
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(tf, s); }
+		)();
+	}
+</script>
+<noscript>
+  <img src="http://api.trustedform.com/ns.gif" />
+</noscript>
+    
+    
+	</body>
+</html>

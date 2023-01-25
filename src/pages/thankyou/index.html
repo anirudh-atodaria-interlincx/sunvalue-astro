@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="/images/favicon.png">
+<title>SunValue</title>
+<link href="/css/thankyou.css" rel="stylesheet" type="text/css" />
+
+<!-- Google Tag Manager -->
+<script>
+	window.dataLayer = window.dataLayer || [];
+
+	const leadId = (new URL(document.location)).searchParams.get('id')
+	let soldInfo = window.sessionStorage.getItem(`lead_${leadId}`)
+	soldInfo = JSON.parse(soldInfo)
+
+	if (soldInfo) {
+		dataLayer.push({
+			'event': 'pageview',
+			'pageTitle': 'Thank You',
+			'pagePath': '/thankyou/',
+			'price': soldInfo.price,
+		});
+	}
+
+	if (document.location.hostname.match('sunvalue.com')) {
+		(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-NZRLS3C');
+	}
+</script>
+<!-- End Google Tag Manager -->
+
+<script type="text/javascript" src="/js/redirect.js"></script>
+
+<style>
+	body {
+		display: none;
+	}
+</style>
+
+</head>
+<body class="step-page">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NZRLS3C";
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+	<div class="content-wrapper">
+		<header class="site-header row space-between align-center">
+			<div class="container">
+				<div class="lock"></div>
+				<a class="logo" href="/"><img src="/images/logo.svg" alt=""></a>
+			</div>
+		</header>
+		<section class="steps-wrapper light-gradient">
+			<div id="default-step" class="container animation moveup text-center main-title in-viewport full-visible go">
+				<h1>Your request has been submitted!</h1>
+
+				<div class="section-first" style="padding: 10px !important;">
+					
+					<h2>We'll reach out to verify your information if you qualify.<br></h2>
+					
+				</div>
+				<h6>* Those who don't qualify will&nbsp;not&nbsp;receive&nbsp;a&nbsp;call.</h6>	
+			</div>
+			<div style="display: none;" id="v2-step" class="container animation moveup">
+				<div class="step">
+					<div class="step-header text-center">
+						<h2>You've Been Matched With A Provider!</h2>
+					</div>
+					<div class="step-content  text-center">
+						<h5>Expect a phone call from the expert below to hear more about the benefits of going solar and the savings they can provide you.</h5>
+		
+						<div style="display: none;" id="buyer-block">
+							<h4 style="margin-top:30px">Best Available Local Provider Is:</h4>
+							<img id="buyer-logo" style="margin:0 auto;margin-top:10px;margin-bottom:10px">
+						</div>
+
+						<h4 style="margin-top:30px">Your Exclusive Offer Expires In:</h4>
+		
+						<div class="countdown-timer-wrapper">
+							<div id="flipdown" class="flipdown"></div>
+						</div>
+		
+						<a style="display: none;" id="call-now" style="margin-top:30px" class="btn btn-green" href="#">Can't Wait? Call Now</a>
+		
+					</div>
+				</div>
+			</div>
+		</section>
+
+<div class="container">
+			<footer class="site-footer text-center animation moveup" style="padding-top:5px;">
+				<div class="footer-logo flhide" style="margin-bottom:10px !important"><a href="/"><img src="/images/logo.svg" alt=""></a></div>
+				<div class="links">
+					<div class="copyright">
+					<span class="copyright-text" style="margin-right:5px"></span><br><a href="/contact-us" target="_blank">Questions?</a> | <a href="/privacy-policy" target="_blank">Privacy Policy</a> | <a href="/terms-conditions" target="_blank">Terms</a> | <a href="/ccpa" target="_blank">CCPA</a>
+					</div>
+				</div>
+			</footer>
+</div>
+
+	</div>
+ 
+
+<script type="text/javascript" src="/js/copyright.js"></script>
+<script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="/js/jquery.viewportchecker.js"></script>
+<script type="text/javascript" src="/js/thankyou.js"></script>
+</body>
+</html>

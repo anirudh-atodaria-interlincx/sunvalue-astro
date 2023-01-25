@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="facebook-domain-verification" content="xig2ybzgnqt265i9n6c3cls47ob878" />
+
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<title>SunValue</title>
+
+	<link href="/css/style.css" rel="stylesheet" type="text/css" />
+
+	<!-- Google Tag Manager -->
+	<script>
+		if (document.location.hostname.match('sunvalue.com')) {
+			(function (w, d, s, l, i) {
+				w[l] = w[l] || [];
+				w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+				var f = d.getElementsByTagName(s)[0],
+					j = d.createElement(s),
+					dl = l != "dataLayer" ? "&l=" + l : "";
+				j.async = true;
+				j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+				f.parentNode.insertBefore(j, f);
+			})(window, document, "script", "dataLayer", "GTM-NZRLS3C");
+		}
+	</script>
+	<!-- End Google Tag Manager -->
+</head>
+
+<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NZRLS3C" ; height="0" width="0"
+			style="display: none; visibility: hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+	<div class="content-wrapper">
+		<header class="site-header row space-between align-center">
+			<div class="header-left">
+				<a class="logo" href="/"><img src="/images/logo.svg" alt="" /></a>
+			</div>
+			<a class="menu-btn" href="javascript:void(0)"><span class="menu-line"></span>Menu</a>
+			<nav class="main-menu">
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/about-us">About</a></li>
+					<li><a href="/#how-it-works">How it Works</a></li>
+					<li><a href="/news">News</a></li>
+					<li><a href="/contact-us">Contact Us</a></li>
+				</ul>
+				<a class="btn" href="/steps">Get Started</a>
+			</nav>
+			<div class="header-right">
+				<a class="btn" href="/steps">Get Started</a>
+			</div>
+		</header>
+
+		<section class="page-title animation fade-in">
+			<div class="container animation moveup">
+				<div class="title">
+					<h1>Submit a CCPA Request</h1>
+				</div>
+			</div>
+		</section>
+		<section class="s-pb">
+			<div class="ccpa-form-img" style="background-image:url(/images/banner.webp);"></div>
+			<div class="container extra-small-container animation moveup" data-delay="400">
+				<div class="ccpa-form light-bg">
+					<h2>Submit a CCPA Request</h2>
+					<form id="ccpaForm">
+					<ul class="form-list style-2">
+						<li class="full">
+							<h5><label for="request_for">Are you making this request on behalf of yourself or someone else?</label></h5>
+							<select id="request_for" class="text-field" name="request_for" required="required">
+								<option value="">-- Select One --</option>
+								<option value="Myself">Myself</option>
+       							<option value="Someone Else">Someone Else</option>
+							</select>
+						</li>
+						<li class="full">
+							<h5><label for="request_type">What type of request would you like to make? (Select at least one)</label></h5>
+							<div class="custom-checkbox w-100">
+								<input id="request_access"  type="checkbox" name="request_type" value="Please provide access to my personal information" role="checkbox" aria-invalid="false">
+								<label for="request_access">Please provide access to my personal information</label>
+							</div>
+							<div class="custom-checkbox w-100">
+								<input id="request_delete"  type="checkbox" name="request_type" value="Please delete my personal information" role="checkbox" aria-invalid="false">
+								<label for="request_delete">Please delete my personal information </label>
+							</div>
+							<div class="custom-checkbox w-100">
+								<input id="request_dontsell"type="checkbox" name="request_type" value="Please do not sell my personal information" role="checkbox" aria-invalid="false">
+								<label for="request_dontsell">Please do not sell my personal information</label>
+							</div>
+							<div class="custom-checkbox w-100">
+								<input id="request_question"  type="checkbox" name="request_type" value="Ask SunValue a question related to my personal information and/or the CCPA" role="checkbox" aria-invalid="false">
+								<label for="request_question">Ask SunValue a question related to my personal information and/or the CCPA</label>
+							</div>
+						</li>
+						<li class="full">
+							<h5>In order for us to process your request, please provide the following information (please try to use the information previously provided to SunValue to help us identify you)</h5>
+						</li>
+						<li class="floating-label">
+							<input id="first_name" type="text" name="first_name" class="text-field" required>
+							<label for="first_name">First Name</label>
+						</li>
+						<li class="floating-label">
+							<input id="last_name" type="text" name="last_name" class="text-field" required>
+							<label for="last_name">Last Name</label>
+						</li>
+						<li class="floating-label">
+							<input id="phone_number" type="tel" name="phone" maxlength="12" class="text-field" required>
+							<label for="phone_number">Phone Number</label>
+						</li>
+						<li class="floating-label">
+							<input id="email" type="email" name="email" class="text-field" required>
+							<label for="email">Email</label>
+						</li>
+						<li class="full floating-label">
+							<input id="street_address" type="text" name="address" class="text-field" required>
+							<label for="street_address">Street Address</label>
+						</li>
+						<li class="floating-label">
+							<input id="city" type="text" name="city" class="text-field" required>
+							<label for="city">City</label>
+						</li>
+						<li class="floating-label">
+							<input id="state" type="text" name="state" class="text-field" maxlength="2" required>
+							<label for="state">State</label>
+						</li>
+						<li class="floating-label">
+							<input id="zip" type="text" name="zip_code" class="text-field" required>
+							<label for="zip">Zip</label>
+						</li>
+						<li class="full">
+							<label for="notes">Please provide any additional information that may help us to confirm your identity or ask us a question</label>
+							<textarea id="comments" name="message" class="text-field" role="textbox" aria-invalid="false"></textarea>
+						</li>
+						<li>
+							<button data-cy="submit" class="btn btn-big btn-green">Submit</button>
+						</li>
+					</ul>
+					</FORM>
+				</div>
+			</div>
+		</section>
+		<section class="s-py light-gradient">
+			<div class="container text-center animation moveup">
+				<div class="title">
+					<h2>Explore Your Options</h2>
+					<p>Calculate Savings & Compare Quotes From Top Providers.</p>
+				</div>
+				<form class="zip-form" action="">
+					<div class="zipcode-form">
+						<div class="tool-tip animation moveup" data-delay="200">
+							Start by entering your Zip Code
+						</div>
+						<div class="row">
+							<input type="text" class="text-field" id="zipcode" name="zip" autocomplete="postal-code" placeholder="Enter Zip Code" size="5">
+							<button class="btn btn-green w-100">Get Started</button>
+							<span class="error"></span>
+						</div>
+					</div>
+				</form>
+			</div>
+		</section>
+		<div class="container">
+			<footer class="site-footer text-center animation moveup">
+				<div class="footer-logo">
+					<a href="/"><img src="/images/logo.svg" alt="" /></a>
+				</div>
+				<div class="links">
+					<div class="copyright"></div>
+					<ul class="footer-menu">
+						<li><a href="/about-us">About Us</a></li>
+						<li><a href="/faq">FAQ</a></li>
+						<li><a href="/privacy-policy">Privacy Policy</a></li>
+						<li><a href="/terms-conditions">Terms & Conditions</a></li>
+						<li><a href="/contact-us">Contact Us</a></li>
+					</ul>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.viewportchecker.js"></script>
+
+	<!-- Custom Js -->
+	<script type="text/javascript" src="/js/script.js"></script>
+	<script>
+		var currentYear = new Date().getFullYear();
+
+		$(".copyright").append(
+			document.createTextNode("SunValue ©" + " " + currentYear)
+		);
+	</script>
+</body>
+
+</html>

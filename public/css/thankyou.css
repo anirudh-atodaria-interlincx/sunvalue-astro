@@ -1,0 +1,618 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+h1,
+h2,
+h6,
+img,
+var,
+footer,
+header,
+section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	font-weight: normal;
+	vertical-align: top;
+	background: transparent;
+	list-style: none;
+}
+
+
+footer,
+header,
+section {
+	display: block;
+}
+
+html,
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	font-family: 'Nunito', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: normal;
+	color: #5C5D61;
+	padding: 0;
+	margin: 0;
+	text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	overflow-x: hidden;
+}
+
+*,
+:after,
+:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+a {
+	color: #729DB6;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	padding: 0;
+	outline: none;
+}
+
+a:hover {
+	color: #83be63;
+}
+
+.title {
+	margin-bottom: 30px;
+}
+
+h1 {
+	font-size: 40px;
+	color: #4A4A4A;
+	font-weight: 700;
+	line-height: normal;
+	margin-bottom: 5px;
+}
+
+h2 {
+	font-size: 36px;
+	color: #4A4A4A;
+	font-weight: 600;
+	line-height: normal;
+	margin-bottom: 5px;
+}
+
+h6 {
+	font-size: 16px;
+	color: #646464;
+	line-height: normal;
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+
+.title:last-child,
+h1:last-child,
+h2:last-child,
+h6:last-child {
+	margin-bottom: 0;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.content-wrapper {
+	width: 100%;
+	position: relative;
+	padding-top: 89px;
+}
+
+.container {
+	width: 1270px;
+	max-width: 100%;
+	padding-left: 50px;
+	padding-right: 50px;
+	margin: 0 auto;
+}
+
+.row {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+
+.align-center {
+	align-items: center;
+	-webkit-align-items: center;
+	-ms-align-items: center;
+}
+
+.space-between {
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+	-ms-justify-content: space-between;
+}
+
+.light-gradient {
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#eaeff5+0,c4d5e0+100 */
+	background: rgb(234, 239, 245);
+	/* Old browsers */
+	background: -moz-linear-gradient(-45deg, rgba(234, 239, 245, 1) 0%, rgba(196, 213, 224, 1) 100%);
+	/* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg, rgba(234, 239, 245, 1) 0%, rgba(196, 213, 224, 1) 100%);
+	/* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg, rgba(234, 239, 245, 1) 0%, rgba(196, 213, 224, 1) 100%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eaeff5', endColorstr='#c4d5e0', GradientType=1);
+	/* IE6-9 fallback on horizontal gradient */
+}
+
+.site-header {
+	position: fixed;
+	z-index: 10;
+	width: 100%;
+	top: 0;
+	left: 0;
+	padding: 20px 50px;
+	background: #fff;
+	border-bottom: 1px solid transparent;
+	transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+}
+
+.logo {
+	display: block;
+	width: 105px;
+}
+
+.site-footer {
+	padding: 50px 0;
+	border-top: 2px solid #E0E4EB;
+}
+
+.light-gradient+.container .site-footer {
+	border-top-color: transparent;
+}
+
+.site-footer .footer-logo {
+	max-width: 105px;
+	margin: 0 auto 30px auto;
+}
+
+.site-footer .links .copyright {
+	display: inline-block;
+}
+
+.site-footer a {
+	color: #5C5D61;
+}
+
+.site-footer a:hover {
+	color: #83be63;
+}
+
+/* animation css */
+.animation {
+	opacity: 0;
+}
+
+.animation.go {
+	opacity: 1;
+}
+
+.moveup.go {
+	-webkit-animation: linear;
+	-webkit-animation-name: moveup;
+	-webkit-animation-duration: .6s;
+}
+
+@-webkit-keyframes moveup {
+	0% {
+		transform: translateY(30px);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes moveup {
+	0% {
+		transform: translateY(30px);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fade-in-left {
+	0% {
+		transform: translateX(30px);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes fade-in-left {
+	0% {
+		transform: translateX(30px);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fade-in-right {
+	0% {
+		transform: translateX(-30px);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes fade-in-right {
+	0% {
+		transform: translateX(-30px);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+/** steps css start **/
+.step-page .site-header {
+	padding: 18px 0;
+	border-bottom: 1px solid #DEDFDF;
+}
+
+.site-header .container {
+	position: relative;
+}
+
+.site-header .lock {
+	position: absolute;
+	top: -9px;
+	left: 50px;
+	width: 36px;
+	height: 36px;
+	border: 1px solid #DEDFDF;
+	background: url(/images/lock.svg) center center no-repeat;
+	background-size: 11px auto;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}
+
+.step-page .site-header .logo {
+	margin: 0 auto;
+}
+
+@-webkit-keyframes loading {
+	0% {
+		width: 0;
+	}
+
+	100% {
+		width: 100%;
+	}
+}
+
+@keyframes loading {
+	0% {
+		width: 0;
+	}
+
+	100% {
+		width: 100%;
+	}
+}
+
+/**
+ * ==============================================
+ * Dot Typing
+ * ==============================================
+ */
+
+@keyframes wave {
+
+	0%,
+	60%,
+	100% {
+		transform: initial;
+	}
+
+	30% {
+		transform: translateY(-10px);
+	}
+}
+
+.step-page .content-wrapper {
+	padding-top: 56px;
+}
+
+.steps-wrapper {
+	/*	min-height: calc(100vh - 56px);		*/
+	padding: 100px 0 170px 0;
+	position: relative;
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,dde9f0+100 */
+	background: #ffffff;
+	/* Old browsers */
+	background: -moz-linear-gradient(top, #ffffff 0%, #dde9f0 100%);
+	/* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #ffffff 0%, #dde9f0 100%);
+	/* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #ffffff 0%, #dde9f0 100%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dde9f0', GradientType=0);
+	/* IE6-9 */
+}
+
+.steps-wrapper:before {
+	content: "";
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: url(/images/city-bg.svg) center bottom no-repeat;
+	opacity: .2;
+}
+
+.steps-wrapper .container {
+	width: 830px;
+}
+
+@-webkit-keyframes rotating
+
+/* Safari and Chrome */
+	{
+	from {
+		-webkit-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	to {
+		-webkit-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes rotating {
+	from {
+		-ms-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	to {
+		-ms-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+@media screen and (max-width: 1199px) {
+	.steps-wrapper {
+		padding: 70px 0 170px 0;
+	}
+}
+
+@media screen and (max-width: 1023px) {
+	.content-wrapper {
+		padding-top: 51px;
+	}
+
+	.container {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	
+	.site-header {
+		padding: 15px 30px;
+		background: #fff;
+	}
+
+	.site-footer {
+		padding: 30px 0;
+	}
+
+	.site-footer .footer-logo {
+		margin: 0 auto 20px auto;
+	}
+
+	.site-footer .links {
+		width: 100%;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-flow: row wrap;
+		flex-flow: row wrap;
+	}
+
+	.site-footer .links .copyright {
+		display: block;
+		width: 100%;
+	}
+
+	.site-footer .links .copyright {
+		order: 2;
+		margin-top: 20px;
+	}
+
+	.site-header .lock {
+		left: 30px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.title br {
+		display: none;
+	}
+
+	.steps-wrapper {
+		padding: 50px 0 100px 0;
+	}
+
+	.steps-wrapper:before {
+		background-size: 80% auto;
+	}
+
+	.steps-wrapper .container {
+		padding: 0;
+	}
+
+	.steps-wrapper h2 {
+		font-size: 30px;
+	}
+}
+
+@media screen and (max-width: 567px) {
+	.title {
+		margin-bottom: 20px;
+	}
+
+	h1 {
+		font-size: 32px;
+	}
+
+	h2,
+	.steps-wrapper h2 {
+		font-size: 26px;
+	}
+
+	.container {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	
+	.site-header {
+		padding: 15px 20px;
+	}
+
+	.site-header .lock {
+		left: 20px;
+	}
+
+	.steps-wrapper {
+		padding: 50px 0;
+	}
+}
+
+
+
+@media screen and (max-width: 812px) {
+
+	.flhide {
+		display: none;
+	}
+}
+
+/*
+New Styles
+*/
+.main-title h1 {
+	font-size: 1.8rem;
+}
+
+.main-title h2 {
+	font-size: 1.3rem;
+}
+
+.main-title h1 span {
+	color: #83BE63;
+}
+
+@media screen and (max-width: 767px) {
+	.container {
+		padding-left: 15px !important;
+		padding-right: 15px !important;
+		box-sizing: border-box;
+	}
+}
+
+section > div > h1 {
+	margin-bottom: 20px;
+}
+
+section > div > div > h2{
+	color: #000;
+}
+
+.steps-wrapper{
+	padding-top: 30px;
+}
+
+.section-first{
+	color: #5C5D61;
+	font-size: 100%;
+	border-radius: 25px;
+	background-color: rgb(143, 210, 106);
+	margin: 0px 0px 20px !important;
+	padding: 10px !important;
+}

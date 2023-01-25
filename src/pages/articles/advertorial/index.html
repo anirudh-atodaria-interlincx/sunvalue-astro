@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="format-detection" content="telephone=no">
+<meta name="facebook-domain-verification" content="xig2ybzgnqt265i9n6c3cls47ob878" />
+
+<link rel="shortcut icon" href="/favicon.ico">
+<title>State Policy Makes Going Solar Easy For Homeowners</title>
+
+<!-- GEO Headline -->
+<script>
+	const params = (new URL(document.location)).searchParams
+
+	const xhr = new XMLHttpRequest()
+	const apiUrl = 'https://api.sunvalue.com/api/geo'
+
+	let geoData = null
+
+	xhr.open("GET", apiUrl, true)
+	xhr.overrideMimeType("application/json")
+	xhr.onload = function (event) {
+		if (xhr.readyState === 4 && xhr.status === 200){
+			geoData = JSON.parse(xhr.responseText)
+			return
+		}
+		generateHeadline()
+		console.log(xhr, event)
+	}
+
+	xhr.addEventListener('error', function (error) {
+		generateHeadline()
+		console.log(error)
+	})
+
+	xhr.send(null)
+
+	document.addEventListener("DOMContentLoaded", (event) => {
+		function loop () {
+			if(!geoData) return window.setTimeout(loop, 10)
+			generateHeadline()
+		}
+
+		loop()
+	})
+
+	function generateHeadline () {
+		let headline = document.title
+		const state = geoData.regionName || geoData.countryName
+		const customHeadline = params.get('advheadline')
+
+
+		if (customHeadline) {
+			headline = customHeadline
+		}
+
+		headline = headline.replace(/state/gi, state)
+
+
+		document.title = headline
+		document.querySelector('h2#headline').innerHTML = headline
+		document.querySelector('span.get-state').innerHTML = state
+
+		document.getElementById('nogo').classList.add('hide')
+		document.querySelector('.bill-selection').classList.remove('hide')
+		document.querySelector('.article-detail').classList.remove('hide')
+		window.dispatchEvent(new Event('resize'))
+	}
+</script>
+<!-- GEO Headline End -->
+
+<!-- Google Tag Manager -->
+<script>
+	if (document.location.hostname.match('sunvalue.com')) {
+		(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-NZRLS3C');
+	}
+</script>
+<!-- End Google Tag Manager -->
+<link href="/css/advertorial.css" rel="stylesheet" type="text/css" />
+</head>
+
+
+<body class="home-page">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NZRLS3C";
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+	<div class="content-wrapper">
+		<header class="site-header row space-between align-center"  style="padding: 10px 50px !important;">
+			<h4 class="header-hidden">Advertorial</h4>
+			<div class="header-left">
+				<a class="logo" href="/save/"><img height="25" width="125" src="/images/logo.svg" alt=""></a>
+			</div>
+
+			<div class="header-center"> <h4>Advertorial</h4></div>
+			<div class="header-right">
+					<a class="btn pass-params"
+							href="/save/">Qualify</a>
+			</div>
+		</header>
+
+		<div id="nogo">
+			Loading...
+		</div>
+<section class="article-detail hide" style="margin-top: 88px">
+	<div class="s-py-half container small-container animation moveup in-viewport go" data-delay="400" style="margin: auto !important;">
+		<h2 id="headline" align="center">
+		</h2>
+		<h4 align="center">Congress Extends Solar Incentives Through 2022
+		</h4>
+		<img class="post-img" height="800" width="1200" src="/images/15month.webp" alt="savings-meter">
+		<div class="inner">
+			<p style="margin: 0px 0px 20px !important;"><b>Power companies are fighting an uphill battle they
+					are sure to lose and they’re blaming customers who are taking advantage of massive <a class="pass-params" href="/save/">government
+						savings programs.</a> Specifically, they are blaming <span class="get-state"></span> Solar Incentives that
+					encourage homeowners to use clean energy by reducing solar power projects to $0
+					installations.</b>
+				<br><br>
+				Until now, solar panels were less about saving money and more about environmental protection. In
+				order to get more people to switch to clean solar energy the federal and state governments are
+				highly incentivizing homeowners who live in <a class="pass-params" href="/save/">specific
+					zip codes</a> to go solar with $1000’s of dollars in rebates and incentives that can cover
+				100% of the costs associated with a new solar panel installation.
+				<br><br>
+				When homeowners visit <a class="pass-params" href="/save/">SunValue</a>
+				to see if they qualify, many are shocked to learn that <b>solar panels can be installed on their
+					home with no upfront costs after rebates and solar incentives.</b> You can find out which
+				solar incentives are offered in your area by using your zip code. You can even use this tool to
+				help calculate your savings by entering your utility provider and your average power bill. In
+				many cases, customers are saving up to 50% on the cost of powering their home each year.
+			</p>
+			<hr>
+			<div align="center">
+				<h4>See if you Qualify for No Cost Solar Installation</h4>
+				<a class="btn btn-green pass-params" href="/save/" style="font-size: 18px !important; font-weight: bold !important;">See if I am Eligible</a>
+			</div>
+
+			<hr>
+
+			<h4>How Do Solar Programs Work?</h4>
+			<p> Solar panels are much cheaper today than they were 10 years ago, which means millions of
+				homeowners that could not previously afford to do so are switching to solar. <span class="get-state"></span>
+				Homeowners that qualify for this new program no longer have to buy solar panels. With rebates
+				being as high as they are, homeowners are able to drastically reduce their power bill without
+				dealing with the upfront costs of installing solar panels. </p>
+
+
+
+			<h4> Want To See How Much You Can Save? Here’s How </h4>
+			<p>Step 1:&nbsp;Select your average electric bill below<br>
+				Step 2: Go onto <a class="pass-params" href="/save/">SunValue</a>
+				and find out how much you may save! It takes just two minutes to get started</p>
+		</div>
+
+	</div>
+</section>
+<section class="s-py light-gradient bill-selection hide" style="padding: 0px !important;">
+	<div class="container text-center animation moveup in-viewport go" style="line-height: normal !important; padding: 20px 10px !important;">
+
+		<h4>Start By Selecting Your Monthly Energy Bill:
+		</h4>
+		<div class="" align="center" style="line-height: normal !important; margin: 0px !important;">
+			<a class="btn btn-green pass-params" href="/save/" style="font-weight: bold; font-size: 18px; margin: 10px !important; padding: 10px !important;">$101
+				- $150</a>
+
+			<a class="btn btn-green pass-params" href="/save/" style="font-weight: bold; font-size: 18px; padding: 10px !important; margin: 10px !important;">$151
+				- $200</a>
+
+			<a class="btn btn-green pass-params" href="/save/" style="font-weight: bold; font-size: 18px; padding: 10px !important; margin: 10px !important;">$201
+				- $300</a>
+
+			<a class="btn btn-green pass-params" href="/save/" style="font-weight: bold; font-size: 18px; padding: 10px !important; margin: 10px !important;">$301
+				- $400</a>
+
+			<a class="btn btn-green pass-params" href="/save/" style="font-weight: bold; font-size: 18px; padding: 10px !important; margin: 10px !important;">$401
+				- $500</a>
+
+			<a class="btn btn-green pass-params" href="/save/" style="font-weight: bold; font-size: 18px; padding: 10px !important; margin: 10px !important;">Over
+				$501</a>
+		</div>
+	</div>
+</section>
+
+<div class="container">
+    <footer class="site-footer text-center animation moveup">
+        <div class="footer-logo"><a href="/index.html"><img height="25" width="125" src="/images/logo.svg" alt=""></a></div>
+        <div class="links">
+            <div class="copyright"></div>
+            <ul class="footer-menu">
+                <li><a href="/about-us.html">About Us</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+                <li><a href="/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/terms-conditions.html">Terms & Conditions</a></li>
+                <li><a href="/contact-us">Contact Us</a></li>
+            </ul>
+        </div>
+        <p style="padding-top: 1em;">*This is an advertisement and not an actual news article, blog, or consumer protection update. We are dedicated to bringing readers valuable information which can help them accomplish their financial and lifestyle goals. Our disclaimer is that this site does receive compensation for product reviews and referrals or purchases made through our links. This page is an advertisement/advertorial. The story depicted here is for demonstration purposes only and everyone’s results may vary. We hope you find our online resource informative and helpful.</p>
+    </footer>
+</div>
+</div>
+
+<script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="/js/jquery.viewportchecker.js"></script>
+
+<!-- Custom Js -->
+<script>
+	var currentYear = new Date().getFullYear();
+
+	$(".copyright").append(
+		document.createTextNode("SunValue ©" + " " + currentYear)
+	);
+
+	$("a.pass-params").each(function (i, elem) {
+		elem.href = `${elem.href}?${params.toString()}`
+	})
+
+	$(document).ready(function () {
+		$(window).scroll(function () {
+		if ($(window).scrollTop() >= 50) {
+			$('.site-header').addClass('fixed')
+		} else {
+			$('.site-header').removeClass('fixed')
+		}
+		})
+		if ($(window).scrollTop() >= 50) {
+			$('.site-header').addClass('fixed')
+		} else {
+			$('.site-header').removeClass('fixed')
+		}
+	
+		$('.animation').viewportChecker({
+		classToAdd: 'in-viewport',
+		offset: 50,
+		callbackFunction: function (elem) {
+			var time = elem.data('delay') || 0
+			setInterval(function () {
+			elem.addClass('go')
+			}, time)
+		}
+		})
+  	})
+</script>
+</body>
+
+</html>

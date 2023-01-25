@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="facebook-domain-verification" content="xig2ybzgnqt265i9n6c3cls47ob878" />
+
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<title>SunValue</title>
+
+	<link href="/css/style.css" rel="stylesheet" type="text/css" />
+
+	<!-- Google Tag Manager -->
+	<script>
+		if (document.location.hostname.match('sunvalue.com')) {
+			(function (w, d, s, l, i) {
+				w[l] = w[l] || [];
+				w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+				var f = d.getElementsByTagName(s)[0],
+					j = d.createElement(s),
+					dl = l != "dataLayer" ? "&l=" + l : "";
+				j.async = true;
+				j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+				f.parentNode.insertBefore(j, f);
+			})(window, document, "script", "dataLayer", "GTM-NZRLS3C");
+		}
+	</script>
+	<!-- End Google Tag Manager -->
+</head>
+
+<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NZRLS3C" ; height="0" width="0"
+			style="display: none; visibility: hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+	<div class="content-wrapper">
+		<header class="site-header row space-between align-center">
+			<div class="header-left">
+				<a class="logo" href="/"><img src="/images/logo.svg" alt="" /></a>
+			</div>
+			<a class="menu-btn" href="javascript:void(0)"><span class="menu-line"></span>Menu</a>
+			<nav class="main-menu">
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/about-us">About</a></li>
+					<li><a href="/#how-it-works">How it Works</a></li>
+					<li><a href="/news">News</a></li>
+					<li><a href="/contact-us">Contact Us</a></li>
+				</ul>
+				<a class="btn" href="/steps">Get Started</a>
+			</nav>
+			<div class="header-right">
+				<a class="btn" href="/steps">Get Started</a>
+			</div>
+		</header>
+		<section class="page-title animation fade-in">
+			<div class="container animation moveup">
+				<div class="title">
+					<h1>Contact Us</h1>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="container small-container animation moveup" data-delay="400">
+				<div class="row space-between align-center contact-form s-py">
+					<div class="form-block">
+						<div class="title">
+							<h2>Get in touch</h2>
+							<p>Take a second to fill out the form and we will get back to you within 24 hours.</p>
+							<span class="form-msg"></span>
+						</div>
+						<form id="contactForm">
+							<ul class="form-list style-2">
+								<li class="floating-label">
+									<input id="Name" type="text" name="first_name" class="text-field">
+									<label>Enter you first name</label>
+									<span data-cy="first-name-error" class="error"></span>
+								</li>
+								<li class="floating-label">
+									<input id="lastName" type="text" name="last_name" class="text-field">
+									<label>Enter you last name</label>
+								</li>
+								<li class="floating-label full">
+									<input id="email" type="email" name="email" class="text-field">
+									<label>Email</label>
+									<span data-cy="email-error" class="error"></span>
+								</li>
+								<li class="floating-label full">
+									<textarea id="message" class="text-field" name="message"></textarea>
+									<label>Your Message</label>
+								</li>
+								<li class="floating-label full">
+									<div class="g-recaptcha" id="recaptcha2" render="explicit"></div>
+									<span class="error"></span>
+								</li>
+								<li>
+									<button id="contact-submit" data-cy="submit" class="btn btn-big w-100 btn-green btn-with-loader">
+										<div class="loader-hidden loader"></div>
+										<span>Submit</span>
+									</button>
+								</li>
+							</ul>
+						</form>
+					</div>
+					<div class="img-block">
+						<img src="/images/contact-image.webp" style="object-fit: cover; height: 540px; width: 465px;" alt="solar">
+					</div>
+				</div>
+				<hr class="no-margin">
+				<div class="map-section s-py">
+					<div class="title">
+						<h2>We appreciate any questions you <br>have regarding our services.</h2>
+					</div>
+					<div class="map-wrapper">
+						<div class="contact-info">
+							<div class="item location">
+
+SunValue
+<br>
+177 Huntington Ave, Unit 1703 PMB 47148, Boston, MA 02115
+<br>
+Tel: <a href="tel:+16508440992">(+1) 650-844-0992</a>
+
+
+							</div>
+							<div class="item email">
+								<a href="mailto:assistance@sunvalue.com">assistance@sunvalue.com</a>
+							</div>
+						</div>
+						<img src="/images/sv-map.jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="s-py light-gradient">
+			<div class="container text-center animation moveup">
+				<div class="title">
+					<h2>Explore Your Options</h2>
+					<p>Calculate Savings & Compare Quotes From Top Providers.</p>
+				</div>
+				<form class="zip-form" action="">
+					<div class="zipcode-form">
+						<div class="tool-tip animation moveup" data-delay="200">
+							Start by entering your Zip Code
+						</div>
+						<div class="row">
+							<input type="text" class="text-field" id="zipcode" name="zip" autocomplete="postal-code" placeholder="Enter Zip Code" size="5">
+							<button class="btn btn-green w-100">Get Started</button>
+							<span class="error"></span>
+						</div>
+					</div>
+				</form>
+			</div>
+		</section>
+		
+		<div class="container">
+			<footer class="site-footer text-center animation moveup">
+				<div class="footer-logo">
+					<a href="/"><img src="/images/logo.svg" alt="" /></a>
+				</div>
+				<div class="links">
+					<div class="copyright"></div>
+					<ul class="footer-menu">
+						<li><a href="/about-us">About Us</a></li>
+						<li><a href="/faq">FAQ</a></li>
+						<li><a href="/privacy-policy">Privacy Policy</a></li>
+						<li><a href="/terms-conditions">Terms & Conditions</a></li>
+						<li><a href="/contact-us">Contact Us</a></li>
+					</ul>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.viewportchecker.js"></script>
+	<!-- Custom Js -->
+	<script type="text/javascript" src="/js/script.js"></script>
+	<script>
+		var currentYear = new Date().getFullYear();
+
+		$(".copyright").append(
+			document.createTextNode("SunValue ©" + " " + currentYear)
+		);
+	</script>
+</body>
+
+</html>
+

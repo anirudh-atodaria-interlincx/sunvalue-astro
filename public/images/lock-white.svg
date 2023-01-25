@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="18px" viewBox="0 0 14 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>padlock-f</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="padlock-f" fill="#FFFFFF" fill-rule="nonzero">
+            <path d="M14,10 L14,16 C14,17.1045695 13.1045695,18 12,18 L2,18 C0.8954305,18 0,17.1045695 0,16 L0,10 C0,8.8954305 0.8954305,8 2,8 L2,5 C2,2.23857625 4.23857625,0 7,0 C9.76142375,0 12,2.23857625 12,5 L12,8 C13.1045695,8 14,8.8954305 14,10 Z M7,15 C8.1045695,15 9,14.1045695 9,13 C9,11.8954305 8.1045695,11 7,11 C5.8954305,11 5,11.8954305 5,13 C5,14.1045695 5.8954305,15 7,15 Z M10,6.99999996 L10,4.24999998 C10,3.4461524 9.42820325,2.70336659 8.5,2.3014428 C7.57179678,1.89951901 6.42820322,1.89951901 5.5,2.3014428 C4.57179675,2.70336659 4,3.4461524 4,4.24999998 L4,6.99999996 L10,6.99999996 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

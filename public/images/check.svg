@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="11px" viewBox="0 0 15 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>check</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="chart-success" transform="translate(-204.000000, 0.000000)" fill="#91B5CA" fill-rule="nonzero">
+            <g id="check" transform="translate(204.000000, 0.000000)">
+                <path d="M14.5606,2.56262 L6.64752,10.4752 C6.06154,11.0613 5.11099,11.0613 4.52446,10.4752 L0.439649,6.39009 C-0.14655,5.804 -0.14655,4.85334 0.439649,4.26714 C1.02596,3.68083 1.97643,3.68083 2.56248,4.26692 L5.5863,7.29078 L12.4375,0.439566 C13.0238,-0.146744 13.9743,-0.1463 14.5604,0.439566 C15.1465,1.02576 15.1465,1.97609 14.5606,2.56262 Z" id="Path"></path>
+            </g>
+        </g>
+    </g>
+</svg>

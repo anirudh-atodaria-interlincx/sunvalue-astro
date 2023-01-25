@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="Calculate The Cost of Solar Panels in Your State. Free Solar Cost Estimator And Analysis">
+		<meta name="author" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<meta name="format-detection" content="telephone=no">
+		<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+		<title>State Solar Incentive Program</title>
+   		<link href="/css/program.css" rel="stylesheet" type="text/css" />
+
+<!-- Google Tag Manager -->
+<script>
+	if (document.location.hostname.match('sunvalue.com')) {
+		(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-NZRLS3C');
+	}
+</script>
+<!-- End Google Tag Manager -->
+
+
+	</head>
+	<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NZRLS3C";
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+	
+
+       	<div class="content-wrapper">
+		<header class="site-header">
+			<div class="container">
+				<div class="lock"></div>
+				<div class="logo"><a href="#"><img height="28" width="165" src="/images/logo-no-bg.svg" alt=""></a></div>
+				<div class="header-right">
+					<div class="step-loading">
+						<div class="wave">
+							<div class="dot"></div>
+							<div class="dot"></div>
+							<div class="dot"></div>
+						</div>
+						<div class="loading" data-loading-text="Calculating..."></div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+
+        <form id="solarForm">	
+		<input name="full_address" class="fulladdress" type="hidden">
+		<input name="lat" class="addr-lat" type="hidden" autocomplete="off">
+		<input name="lng" class="addr-lng" type="hidden" autocomplete="off">
+		<input name="street" class="hstreet" type="hidden" value="">
+		<input name="city" class="hcity" type="hidden" value="" id="city">
+		<input name="state" class="hstate" type="hidden" value="" id="state">
+		<input name="country" id="country" class="hcountry" type="hidden" value="US" />
+		<input name="landing_page" type="hidden" value="program">
+		<input name="universal_leadid" id="leadid_token" type="hidden" value="" autocomplete="off"/>
+		<input name="residence_ownership" type="hidden" value="Own" id="ownership"/>
+		<input name="adblock" type="hidden" value="" id="adbl"/>
+		<input type="hidden" name="xxTrustedFormCertUrl" id="xxTrustedFormCertUrl_0" value="https://cert.trustedform.com/454a35b802f3e7b63ffabb4efedb7c6ebe67886c">
+
+		<div class="wrapper show">
+
+			<header id="header-empty-id">
+				<div class="status-indicator">
+					<div class="inner">
+						<span class="indicator"></span>
+						<div class="item indicator-1">Average</div>
+						<div class="item indicator-2">Good</div>
+						<div class="item indicator-3">Great</div>
+						<div class="item indicator-4">Amazing</div>
+						<div class="item indicator-5">Massive</div>
+					</div>
+					<div class="status">Estimated Savings: <span>Great</span></div>
+				</div>
+			</header>
+			<header id="header-with-id" style="display: none">
+				
+				<div class="progress-block" style="z-index:1">
+					<div class="progress">
+						<div class="progress-bar"></div>
+					</div>
+					<p>Your progress <span class="progress-width">16%</span></p>
+				</div>
+			</header>
+
+			<div class="swiper-container banner-slider">
+      			<div style="width:150px;max-width:100%;margin:0 auto;" id="nogo">
+					Loading...
+				</div>
+				<ul class="swiper-wrapper">
+					<li class="swiper-slide steps one">
+						<div class="v-center" id="estimate-zip">
+							<div class="container text-center">
+								<h1 class="title htitle">New State Solar Program Offers $0 Down &amp; Reduces Utility Costs.</h1>
+								<h4 class="sub-title mb-20 location-text"></h4>
+                
+ 								<h5 id="footage-headline"><strong>How Much Would You Like To Save?</strong></h5>
+								<div class="rangeslider-block footage">
+									<input type="range" min="100" max="500" step="50" id="range-slider" data-rangeslider>
+                      <div class="rangeslider-tooltip"><span id='unit-pre'>$</span><output id='output'>250</output><span id='unit-post'>/Month</span></div>
+									<div class="sliderLegend"> 
+										<p class="sliderLegendItem--start" style="margin-bottom:0px">$100</p> 
+										<p class="sliderLegendItem--end" style="margin-bottom:0px">$500+</p>
+									</div>
+								</div>
+
+								<div class="small-container">
+									<ul class="form-list">
+										<li>
+											<input type="text" inputmode="numeric"  class="text-field zip" id="zip" name="zip" autocomplete="postal-code" onkeypress="return isNumberKey(event)"  placeholder="Zip Code" pattern="[0-9]*" maxlength="5" size="5" value="">
+											<span class="error-msg" id="zip-error">&nbsp;</span>
+										</li>
+										<li>
+											<a id="calculateYourSavings" href="javascript:;" class="btn default btn-with-loader">
+												<div class="loader-hidden"></div>
+												<span>Calculate</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+
+								<ul class="list-style hide-in-mobile">
+									<li>100% Free Solar Savings Report</li>
+					                <li>Get Your System Size & Battery Details</li>
+					                <li>Get Your Solar Cost & Energy Savings</li>
+					                <li>Learn About Incentives in Your State</li>
+					                <li>Compare Solar Prices from Installers Near You</li>
+				                </ul> 
+
+							</div>
+						</div>
+					</li>
+					<li class="swiper-slide steps three">
+						<div class="v-center" id="estimate-bill">
+							<div class="container text-center">
+								<h4 class="sub-title hide-in-mobile">✅ Incentives are found in your area!</h4>
+								<h4 class="sub-title show-in-mobile">✅ Incentives are found in your area!</h4>
+								<h2 class="title hide-in-mobile">How much is your monthly energy bill?</h2>
+								<h2 class="title show-in-mobile">How much is your monthly energy bill?</h2>
+								<div class="rangeslider-block with-gradient electric">
+									<input type="range" min="101" max="800" value="101" name="monthly_elec" data-rangeslider>
+									<div class="rangeslider-tooltip">$<output>50</output></div>
+									<div class="sliderLegend"> 
+										<p class="sliderLegendItem--start">$101</p> 
+										<p class="sliderLegendItem--end">$800+</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="swiper-slide steps">
+						<div class="v-center" id="estimate-provider">
+							<div class="container text-center">
+								<h2 class="title hide-in-mobile">Who is your utility provider?</h2>
+								<h2 class="title mb-5 show-in-mobile">Who is your utility provider?</h2>
+								<div class="custom-radio borderd small-container" id="companies">
+								</div>
+								<span class="error-msg" id="companies-error" style="text-align: center;">&nbsp;</span>
+							</div>
+						</div>
+					</li>
+					<li class="swiper-slide steps">
+						<div class="v-center" id="estimate-map">
+							<div class="container text-center">
+								<h2 class="title hide-in-mobile">Where is your home located?</h2>
+								<h2 class="title mb-5 show-in-mobile">Where is your home located?</h2>
+                                <h4 class="sub-title hide-in-mobile">This helps us find your home's position relative to the sun.</h4>
+								<h4 class="sub-title show-in-mobile">This helps us find your home's position relative to the sun.</h4>
+								<div class="map-loader">
+									<img src="/images/loader.svg">
+								</div>
+								<div class="small-container">
+                                    <input type="search" class="text-field" id="autoaddress" name="street" autocomplete="street-address" placeholder="Type Here e.g. 123 West Main Road">
+									<span class="error-msg" id="address-error">&nbsp;</span>
+									<div id="map_canvas" class="map-box"></div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="swiper-slide steps">
+						<div class="v-center" id="estimate-shade">
+							<div class="container text-center">
+								<h2 class="title hide-in-mobile">Does Your Roof Get Sunlight?</h2>
+								<h2 class="title show-in-mobile">Does Your Roof Get Sunlight?</h2>
+								<div class="custom-radio with-img borderd">
+									<div class="custom-radio-item radioNext"><input type="radio" name="shade" value="no_shade" ><span class="icon"><img loading="lazy" height="60" width="60" src="/images/no-shade-white.svg" alt=""></span>Full Sunlight</div>
+									<div class="custom-radio-item radioNext"><input type="radio" name="shade" value="low_shade"><span class="icon"><img loading="lazy" height="60" width="60" src="/images/little-shade-white.svg" alt=""></span>Some Shade</div>
+									<div class="custom-radio-item radioNext"><input type="radio" name="shade" value="high_shade"><span class="icon"><img loading="lazy" height="60" width="60" src="/images/lot-of-shade-white.svg" alt=""></span>Severe Shade</div>
+									<div class="custom-radio-item radioNext"><input type="radio" name="shade" value="unknown"><span class="icon"><img loading="lazy" height="60" width="60" src="/images/uncertain-white.svg" alt=""></span>Uncertain</div>
+								</div>
+								<span class="error-msg" id="shade-error" style="text-align: center;">&nbsp;</span>
+							</div>
+						</div>
+					</li>
+					<li class="swiper-slide steps">
+						<div class="v-center" id="estimate-email">
+							<div class="container text-center">
+								<h4 class="sub-title hide-in-mobile banner">✅ You're almost qualified for this limited-time program.</h4>
+								<h4 class="sub-title show-in-mobile banner">✅ You're almost qualified for this limited-time program.</h4>
+								<h2 class="title hide-in-mobile">What is your email address?</h2>
+								<h2 class="title mb-5 show-in-mobile">What is your email address?</h2>
+                                <h4 class="sub-title hide-in-mobile">We'll send you participation details.</h4>
+								<h4 class="sub-title show-in-mobile">We'll send you participation details.</h4>
+								<div class="small-container">
+									<input type="email" class="text-field" autocomplete="email" id="email" name="email" placeholder="Email address">
+									<span class="error-msg" id="email-error">&nbsp;</span>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="swiper-slide steps">
+						<div class="v-center" id="estimate-name">
+							<div class="container text-center">
+								<h2 class="title hide-in-mobile">What is your name, stranger?</h2>
+								<h2 class="title mb-5 show-in-mobile">What is your name, stranger?</h2>
+								<div class="medium-container">
+									<ul class="form-list">
+										<li>
+											<input type="text" class="text-field" id="fname" name="first_name" placeholder="Enter first name" autocomplete="on">
+											<span class="error-msg" id="fname-error"></span>
+										</li>
+										<li>
+											<input type="text" class="text-field" id="lname" name="last_name" placeholder="Enter last name" autocomplete="on">
+											<span class="error-msg" id="lname-error"></span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li class="swiper-slide steps last">
+						<div class="v-center" id="estimate-phone">
+							<div class="container text-center">
+								<h2 class="title hide-in-mobile">What is the best number to reach you at if you qualify?</h2>
+								<h2 class="title mb-5 show-in-mobile">What is the best number to reach you at if you qualify?</h2>
+								<h4 class="sub-title show-in-mobile">Don't worry, we won't bug you... We HATE bugs! 🕷</h4>
+								<h4 class="sub-title hide-in-mobile">Don't worry, we won't bug you... We HATE bugs! 🕷</h4>
+								<div class="medium-container">
+									<input type="text" inputmode="numeric" class="text-field vsmall-container" id="phone" name="phone_number" placeholder="Enter phone number">
+									<span class="error-msg vsmall-container mb-20" id="phone-error"></span>
+
+    								<input type="hidden" name="tcpa" id="leadid_tcpa_disclosure"/>
+									
+									<span class="final-btn" style="padding-top:15px;display:block;margin:0 auto">
+			    						<input type="submit" id="submit" class="btn default submitButton" value="submit" />
+									</span>
+									<label for="leadid_tcpa_disclosure"  class="font-12" style="margin-top:20px;display:block" id="tcpa_label">
+										By clicking the "Submit" button, you authorize sunvalue.com and up to <a href="/installers.html" target="_blank" tabindex="0" style="color: #5C5D61;text-decoration:underline">4 solar partners</a> to call you and send you pre-recorded messages and text messages at the number you entered above, using an autodialer, with offers about their products or services, even if your phone number is on any national or state "Do Not Call" list. Message and data rates may apply. Your consent here is not based on a condition of purchase.
+									</label>
+
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<div id="next-block" class="hide d-none" data-slide="">
+					<a href="javascript:;" class="default nextSlide">Next</a>
+				</div>
+			</div>
+			<div id="slider-block" class="btn-block hide" data-slide="">
+				<a href="javascript:;" class="back-link prevSlide">Back</a>
+				<a href="javascript:;" class="btn default nextSlide">Next</a>
+			</div>
+			<div class="report-block d-none">
+				<div class="v-center">
+					<div class="container text-center">
+						<div id="processor">
+							<div class="sphere" id="sphere1"></div>
+							<div class="sphere" id="sphere2"></div>
+							<div class="sphere" id="sphere3"></div>
+							<div class="sphere" id="sphere4"></div>
+						</div>
+						<h2 class="title" id="processor-title">Submitting Your Request...</h2>
+                        <h3 id="sub-title">This may take up to 30 seconds please wait.</h3>
+					</div>
+				</div>
+			</div>
+   		</div>
+		</form>
+        
+        <div id="content-part">
+			<section class="s-py-half hide-in-mobile">
+				<div class="container text-center">
+					<div class="title">
+						<h2>Get Your Free Solar Cost <span>+Savings Report</span></h2>
+						<h5>Includes incentives in your state.</h5>
+					</div>
+				</div>
+			</section>
+			<section class="s-py-half light-gradient hide-in-mobile">
+				<div class="container">
+					<div class="row space-between statistics-row">
+						<div class="block government-incentives" style="background-image:url(/images/solar-pole.png);">
+							<div class="inner">
+								<h4>Government Incentives</h4>
+								<p>26% Federal Tax Credit</p>
+								<span class="number">$17,727</span>
+							</div>
+						</div>
+						<div class="block net-profit" style="background-image:url(/images/net-profit-bg.png);">
+							<div class="inner">
+								<h4>Net Profit Over 10 Years</h4>
+								<ul class="table">
+									<li>
+										<span class="label">Power Generated in 10 Years</span>
+										<span class="value">$52,827</span>
+									</li>
+									<li>
+										<span class="label">Increased Home Value</span>
+										<span class="value">$95,492</span>
+									</li>
+									<li>
+										<span class="label">Loan Interest Paid</span>
+										<span class="value">-$10,049</span>
+									</li>
+									<li>
+										<span class="label">Loan Principal Paid</span>
+										<span class="value">-$22,301</span>
+									</li>
+									<li class="footer">
+										<span class="label">Profit</span>
+										<span class="value">$20,744</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="report-example text-center">
+						<h4>Partial Report Example (You Will Receive a Full Solar Report).</h4>
+						<ul class="row space-between report-list">
+							<li>
+								<div class="icon"><img loading="lazy" height="40" width="40" src="/images/save-icon.svg" alt=""></div>
+								<div class="content">
+									<h6>Save You</h6>
+									<span class="number">$2,074</span>
+									<p>An average per year</p>
+								</div>
+							</li>
+							<li>
+								<div class="icon"><img loading="lazy" height="40" width="40" src="/images/reduce-co2-emissions.svg" alt=""></div>
+								<div class="content">
+									<h6>Reduces CO2 Emissions</h6>
+									<span class="number">16.2</span>
+									<p>Metric tones per year</p>
+								</div>
+							</li>
+							<li>
+								<div class="icon"><img loading="lazy" height="40" width="40" src="/images/planting-icon.svg" alt=""></div>
+								<div class="content">
+									<h6>Equivalent to planting</h6>
+									<span class="number">1,173</span>
+									<p>Trees per year</p>
+								</div>
+							</li>
+							<li>
+								<div class="icon"><img loading="lazy" height="40" width="40" src="/images/equivalent-driving-icon.svg" alt=""></div>
+								<div class="content">
+									<h6>Equivalent to Driving</h6>
+									<span class="number">40,180mi</span>
+									<p>Less per year</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="s-py-half">
+				<div class="container">
+					<div class="row space-between align-center cost-section">
+						<div class="content">
+							<h2>The Cost of Solar Panels in 2021</h2>
+							<p>With the cost of solar panels dropping every year, there’s never been a better time to go solar. Due to new government incentives, many homeowners are taking advantage of these opportunities.  A solar panel installation ranges in cost depending on many factors, including your state, equipment brand, and energy usage. That all brings us to a key question: how much do solar panels cost? Use our FREE Solar Calculator to calculate the cost of Solar in your area.</p>
+						</div>
+						<div class="form-block">
+							
+								<ul class="form-list">
+									<li class="full">
+										<button class="button w-100" id="cta2">Get Free Solar Report</button>
+									</li>
+								</ul>
+								<p class="msg"><i class="icon"></i>Get Your Free Solar Cost +Savings Report</p>
+							
+						</div>
+					</div>
+					<hr>
+					<div class="how-it-works-section">
+						<div class="title text-center mx-auto">
+							<h2>How Solar Panels Work?</h2>
+							<p>Solar power works by converting light from the sun into electricity. This electricity can then be used in your home or exported to the grid when it’s not needed. This is done by installing solar panels on your roof which generate DC (Direct Current) electricity. This is then fed into a solar inverter which converts the DC electricity from your solar panels into AC (Alternating Current) electricity.</p>
+						</div>
+						<ol class="how-it-works">
+							<li>
+								<h5>Solar Panels</h5>
+								<img loading="lazy" height="200" width="200" src="/images/solar-panels.webp" alt="">
+							</li>
+							<li>
+								<h5>Inverter</h5>
+								<img loading="lazy" height="200" width="200" src="/images/inverter.webp" alt="">
+							</li>
+							<li>
+								<h5>Switch Board</h5>
+								<img loading="lazy" height="200" width="200" src="/images/switch-board.webp" alt="">
+							</li>
+							<li>
+								<h5>Utility Meter</h5>
+								<img loading="lazy" height="200" width="200" src="/images/utility-meter.webp" alt="">
+							</li>
+							<li>
+								<h5>Grid</h5>
+								<img loading="lazy" height="200" width="200" src="/images/grid.webp" alt="">
+							</li>
+						</ol>
+						<div class="row space-between align-center solar-info">
+							<div class="img"><img loading="lazy" height="550" width="590" src="/images/solar-plate.webp" alt=""></div>
+							<div class="content">
+								<ol class="numbr-list">
+									<li>Your solar panels are made up of silicon photovoltaic (PV) cells. When sunlight hits your solar panels, the solar PV cells absorb the sunlight’s rays and electricity is produced via the Photovoltaic Effect. The electricity produced by your panels is called Direct Current (DC) electricity, and which is not suitable to be used in your home by your appliances. Instead, the DC electricity is directed to your central inverter (or micro inverter, depending on your system setup).</li>
+									<li>Your inverter is able to convert the DC electricity into Alternating Current (AC) electricity, which can be used in your home. From here, the AC electricity is directed to your switchboard.</li>
+									<li>A switchboard allows your usable AC electricity to be sent to the appliances in your home. Your switchboard will always ensure that your solar energy will be used first to power your home, only accessing additional energy from the grid when your solar production is not enough.</li>
+									<li>All households with solar are required to have a bi-directional meter (utility meter), which your electricity retailer will install for you. A bi-directional meter is able to record all the power that is drawn to the house but also record the amount of solar energy that is exported back to the grid. This is called net-metering.</li>
+									<li>Any unused solar electricity is then sent back to the grid. Exporting solar power back to the grid will earn you a credit on your electricity bill, called a feed-in tariff (FiT). Your electricity bills will then take into account the electricity you purchase from the grid, plus credits for the electricity generated by your solar power system that you don’t use.</li>
+								</ol>
+								<p>With solar power, you don’t need to switch it on in the morning or switch it off at night – the system will do this seamlessly and automatically. You also don’t need to switch between solar power and the grid, as your solar system can determine when is best to do so based on the amount of energy being consumed in your home. In fact, a solar system requires very little maintenance (as there are no moving parts) which means you’ll hardly know it’s there. This also means a good quality solar power system will last a long time.</p>
+							</div>
+						</div>
+						<div class="row align-center benefits-section">
+							<div class="img"><img loading="lazy" height="400" width="570" src="/images/solar-plant.webp" alt=""></div>
+							<div class="content">
+								<h2>The Benefits of Going Solar</h2>
+								<p>The premier advantage of the solar power system lies in its versatile adaptability, giving you instant access to renewable solar power. You no longer need an expensive, clunky system to enjoy the benefits of this green energy. It is now effortlessly accessible through multiple paneling technologies, and a host of independent, solar-powered products like solar lighting equipment, chargers and power banks, solar windows and blinds, portable solar power systems for camping and boating, etc.</p>
+								<p>Annual growth of 49%, thanks to solar-friendly government policies, rising demand, and falling prices of solar power systems. In fact, prices have fallen by 40% in the majority of American states!</p>
+								<p>Today, almost any American can tap into the vast benefits of a solar power system, in any place, in various ways!</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="light-gradient solar-cost">
+				<img loading="lazy" class="bg-img" src="/images/solar-plan-on-home.webp">
+				<div class="container">
+					<div class="inner">
+						<div class="title">
+							<h2>See Solar Cost & Savings for <br><span id="cost-saving-state"></span></h2>
+							<h5>Select your approximate home square footage.</h5>
+						</div>
+						<ul class="radio-list">
+							<li class="radio-style-button">
+								<input type="radio" id="1000-sq.ft" name="vehicleYear">
+							  	<label for="1000-sq.ft">1000 sq.ft</label>
+							</li>
+							<li class="radio-style-button">
+								<input type="radio" id="1500-sq.ft" name="vehicleYear">
+							  	<label for="1500-sq.ft">1500 sq.ft</label>
+							</li>
+							<li class="radio-style-button">
+								<input type="radio" id="2000-sq.ft" name="vehicleYear">
+							  	<label for="2000-sq.ft">2000 sq.ft</label>
+							</li>
+							<li class="radio-style-button">
+								<input type="radio" id="2500-sq.ft" name="vehicleYear">
+							  	<label for="2500-sq.ft">2500 sq.ft</label>
+							</li>
+							<li class="radio-style-button">
+								<input type="radio" id="3000-sq.ft" name="vehicleYear">
+							  	<label for="3000-sq.ft">3000+ sq.ft</label>
+							</li>
+						</ul>
+						<a class="button small-btn sTop" href="#">Continue</a>
+					</div>
+				</div>
+			</section>
+			<section class="s-py-half disclosure-section">
+				<div class="container small-container">
+					<h6><b>Marketing Disclosure:</b></h6>
+					<p>This website is a market place. As such you should know that the owner has a monetary connection to the product and services advertised on the site. The owner receives payment whenever a qualified lead is referred but that is the extent of it.</p>
+					<h6><b>Advertising Disclosure:</b></h6>
+					<p>This website and the products & services referred to on the site are advertising marketplaces. This website is an advertisement and not a news publication. Any photographs of persons used on this site are models. The owner of this site and of the products and services referred to on this site only provides a service where consumers can obtain options.</p>
+					<h6><b>Website Disclaimer:</b></h6>
+					<p>All product and company names are trademarks™ or registered® trademarks of their respective holders. Use of them does not imply any affiliation with or endorsement by them. Use of individuals names or likenesses are not an endorsement and are for information or public interest purposes only. SmartDailyDigest is a technology, marketing, and intake service provider, not a law firm, and does not provide legal advice. Website Disclaimer: All product and company names are trademarks™ or registered® trademarks of their respective holders. Use of them does not imply any affiliation with or endorsement by them. Use of individuals names or likenesses are not an endorsement and are for information or public interest purposes only.</p>
+				</div>
+			</section>
+		</div>
+        
+		<footer class="site-footer">
+			<div class="container">
+				<div class="row space-between align-center">
+					<div class="copyright">
+						<p class="copyright-text"></p>
+					</div>
+					<div class="logo"><a href="/"><img height="28" width="165" src="/images/logo-no-bg.svg" alt=""></a></div>
+					<div class="links">
+						<a href="/contact-us" target="_blank">Have a Question?</a>
+						<a href="/privacy-policy" target="_blank">Privacy Policy</a>
+						<a href="/terms-conditions" target="_blank">Terms of Use</a>
+						<a href="/ccpa" target="_blank">CCPA</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+        
+  </div>
+
+  		<link rel="preload" as="style" href="/css/swiper-bundle.min.css" onload="this.rel='stylesheet'" />
+  		<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap" onload="this.rel='stylesheet'">
+
+    <script>
+      const currentYear = new Date().getFullYear()
+
+      document.querySelector(".copyright-text").append(
+        document.createTextNode(`SunValue © ${currentYear} All Rights Reserved.`)
+      );
+    </script>
+
+    <script>
+      const xhr = new XMLHttpRequest()
+      const apiUrl = 'https://api.sunvalue.com/api/geo'
+
+      let geoData = null
+
+      xhr.open("GET", apiUrl, true)
+      xhr.overrideMimeType("application/json")
+      xhr.onload = function (event) {
+        if (xhr.readyState === 4 && xhr.status === 200){
+          geoData = JSON.parse(xhr.responseText)
+        }
+        generateHeadline()
+      }
+
+      xhr.addEventListener('error', function (error) {
+        generateHeadline()
+        console.log(error)
+      })
+
+      xhr.send(null)
+
+      function generateHeadline () {
+        const params = (new URL(document.location)).searchParams
+
+        let headline = document.title
+
+        const state = geoData ? geoData.regionName || geoData.countryName : ''
+        const paramHeadline = params.get('headline')
+
+        if (paramHeadline) headline = paramHeadline
+        headline = headline.replace(/state/gi, state)
+    
+        document.title = headline
+        document.querySelector('#estimate-zip > div > h1').textContent = headline
+        document.querySelector('#cost-saving-state').textContent = state
+        window.dispatchEvent(new Event('resize'))
+      }
+    </script>
+
+  		<script defer type="text/javascript" src="/js/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+		<script defer type="text/javascript" src="/js/html-ie.js"></script>
+		<script defer type="text/javascript" src="/js/rangeslider.min.js"></script>
+  		<script defer type="text/javascript" src="/js/save.js"></script>		
+
+  <script>
+       $(document).ready(function() {	 
+        jQuery(window).bind('scroll', function(e) {
+        if (jQuery(this).scrollTop() > 50) {
+            jQuery('.site-header').addClass('fixed');
+        } else {
+            jQuery('.site-header').removeClass('fixed');
+        }
+    });
+       }); 
+       
+       
+	$('#calculateYourSavings').click(function(){
+        $(".swiper-container").addClass('pt50');
+        $("#content-part").hide();
+    });
+
+
+	$('.sTop').click(function(e){
+        e.preventDefault();
+        window.scrollTo(0,0);
+    });
+
+
+    $('#cta2').click(function(){
+	   window.scrollTo(0,0);
+	});
+    
+        </script>
+
+<script type="text/javascript">
+	if (document.location.hostname.match('sunvalue.com')) {
+		(function() {
+			var field = 'xxTrustedFormCertUrl';
+			var provideReferrer = false;
+			var invertFieldSensitivity = false;
+			var tf = document.createElement('script');
+			tf.type = 'text/javascript'; tf.async = true;
+			tf.src = 'http' + ('https:' == document.location.protocol ? 's' : '') +
+			'://api.trustedform.com/trustedform.js?provide_referrer=' +
+			escape(provideReferrer) + '&field=' + escape(field) + '&l='+new
+			Date().getTime()+Math.random() + '&invert_field_sensitivity=' +
+			invertFieldSensitivity;
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(tf, s); }
+		)();
+	}
+</script>
+<noscript>
+  <img src="http://api.trustedform.com/ns.gif" />
+</noscript>
+    
+    
+	</body>
+</html>
